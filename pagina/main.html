@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Practica 4</title>
+	<!--Ajuste de la anchura de la pantalla-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Vinculamos un .css -->
+    <link href="main.css" media="screen" rel="StyleSheet" type="text/css">
+    <!--Importamos la libreria de bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" media="all" rel="stylesheet" />
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- npm install socket.io Esto es para webSockets. -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src= "main.js"></script>
+</head>
+<body>
+		<div id="container" class="container-fluid">
+			
+
+			<!--	FILA SEPARADORA	-->
+			<div class="row">
+				<div class="container">
+					<div class="col-md-12">   <br><br><br><br>  </div>
+				</div>
+			</div>
+
+			<!--	FILA1	 -->
+			<div class="row">
+				<div class="col-md-12 col-sm-10 col-xs-8">
+					<div id="divSelect" class=" col-md-offset-1 col-md-5 col-sm-3 col-xs-2">
+						<h2> Seleccione un producto </h2>
+						<select class="select">
+							<option value="producto1">Genuino ZERO</option>
+			  				<option value="producto2">Arduino UNO</option>
+			  				<option value="producto3">Genuino 101</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<!--	FILA SEPARADORA	-->
+			<div class="row">
+				<div class="container">
+					<div class="col-md-12">   <br>  </div>
+				</div>
+			</div>
+
+			<!--	FILA2	-->
+			<div class="row">
+
+			<!-- COLUMNA 1-INFO DEL PRODCUTO -->
+				<div class="col-md-offset-1 col-md-3 ">
+					<ul>
+						<li id="nombre">NOMBRE :</li>
+						<li id="precio" >PRECIO :<strong></strong></li>
+						<li>CARACTERÍSTICAS </li>
+							<ul>
+								<li id="MICRO">Microcontrolador:<strong></strong></li>
+								<li id="TF">Tensión de funcionamiento:<strong></strong></li>
+								<li id="UART">Pines:<strong></strong></li>
+								<li id="FLASH">Memoria flash:<strong></strong></li>
+								<li id="RAM">SPRAM:<strong></strong></li>
+								<li id="V">Velocidad de reloj:<strong></strong></li>
+							</ul>
+					</ul>
+				</div>
+
+			<!-- COLUMNA 2-CHAT Y BOTÓN -->
+				<div class="col-md-3" id= 'mensajes'>
+					Nombre de usuario:<br>
+					<input type="text" id="nomusuario">
+					<button id="botonNombre">Utilizar</button><br>
+
+					Mensaje:<br>
+					<input type="text" id="mensaje">
+					<button id="buttonEnviar">Enviar</button>
+				
+				</div>
+
+			<!-- COLUMNA 3-CHAT/USUARIO -->
+				<div class="col-md-2" id= 'usuario'>
+					USUARIO CONECTADOS<br>
+					___________________<br>
+					<ul id="userConectados">
+						<!-- <li> </li> -->
+					</ul>
+					
+									
+				
+				</div>
+
+			</div>
+
+
+		</div> 
+
+</body>
+</html>
