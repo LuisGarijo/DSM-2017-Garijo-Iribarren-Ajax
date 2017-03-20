@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var socket = io.connect('http://localhost:8050')
+	var socket = io.connect('http://localhost:3000')
 
 	$('.select').change(function(){
 		
